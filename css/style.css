@@ -349,6 +349,12 @@ main .icon {
   .justify-content-center-sm p {
     text-align: center;
   }
+  .flex-column-reverse-sm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 @-webkit-keyframes aparecer {

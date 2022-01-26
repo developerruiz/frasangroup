@@ -369,6 +369,9 @@ main {
       text-align: center;
     }
   }
+  .flex-column-reverse-sm{
+    flex-direction: column-reverse;
+  }
 }
 
 @keyframes aparecer {
