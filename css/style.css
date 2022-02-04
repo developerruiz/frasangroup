@@ -391,4 +391,8 @@ main .icon {
   -webkit-animation: aparecer 1.3s;
           animation: aparecer 1.3s;
 }
+
+footer {
+  background: #d1d1d1;
+}
 /*# sourceMappingURL=style.css.map */
