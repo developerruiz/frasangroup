@@ -1,4 +1,4 @@
-#FrasanGroup ladingpage
+# FrasanGroup ladingpage
 Pagina web del corporativo frasangroup, echa con HTML5, CSS3 usando el preprocesador SASS, y javascript vanillia. usando el Framework [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/ "Bootstrap 5.1") , Cuneta con el insert de [Goolgle Analitycs](https://analytics.google.com/analytics/web/ "Goolgle Analitycs"), Desarrollo responsivo.
 
 Demo version 1.0 en servidor gratuito [Netlify](https://www.netlify.com/ "Netlify"), [FrasanGroup Demo.](https://frasangroup.netlify.app/ "FrasanGroup Demo.") 
