@@ -49,13 +49,24 @@ h6 {
   background-color: $color-icon;
 }
 
+.btn-general {
+  background: $color-principal !important;
+  color: $color-blanco;
+
+  &:hover {
+    background: none !important;
+    color: $color-complemetario !important;
+    border: 1px solid $color-complemetario !important;
+  }
+}
+
 p {
   color: $color-negro;
 }
 
-img{
-  width: 100%!important;
-  height: auto!important;
+img {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .text-justify {
@@ -64,6 +75,7 @@ img{
 
 .logo {
   width: 150px;
+  z-index: 9999 !important;
 }
 
 .color-icon {
@@ -75,13 +87,41 @@ img{
   z-index: 99 !important;
 }
 
+.sticky {
+  background-color: $color-principal;
+  height: 70px;
+
+  .list-menu .list li .item-menu {
+    color: $color-blanco !important;
+    transition: .6s ease-in;
+  }
+
+  .logo img {
+    width: 70%;
+  }
+
+  .burger-menu {
+    color: $color-blanco !important;
+    transition: .6s ease-in;
+  }
+}
+
+
+
 header {
-  
+  // opacity: .1;
+  background: rgba(255, 255, 255, 0.14);
+  border-bottom: 2px solid #d1d1d1;
   z-index: 99;
   width: 100%;
-  height: auto;
+  height: 100px;
   overflow: hidden;
   z-index: 999;
+  position: fixed;
+  transition: .6s ease-in;
+  display: flex;
+  align-items: center;
+  // padding: 30px;
 
   .list-menu {
     .list {
@@ -89,6 +129,7 @@ header {
         .item-menu {
           display: inline-block;
           position: relative;
+          transition: .6s ease-in;
         }
 
         .item-menu:after {
@@ -99,7 +140,7 @@ header {
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: $color-principal;
+          background-color: $color-blanco;
           transform-origin: bottom right;
           transition: transform 0.25s ease-out;
         }
@@ -120,9 +161,7 @@ header {
     position: fixed;
     z-index: 99999 !important;
     top: 0;
-    padding: 0 1.5rem;
     display: none;
-
     justify-content: flex-end;
     align-items: center;
     min-height: 5.875rem;
@@ -135,7 +174,8 @@ header {
     .burger-menu {
       cursor: pointer;
       font-size: 2.1875rem;
-
+      color: $color-blanco;
+      transition: .6s ease-in;
     }
 
     .slideMenu {
@@ -196,7 +236,7 @@ header {
 
 
 .carousel-bg {
-  height: 500px!important;
+  height: 100vh !important;
 
   &:nth-child(1) {
     background-image: url(../img/banner-1.jpg);
@@ -286,38 +326,40 @@ header {
 main {
   overflow: hidden;
 
-  .icon{
+  .icon {
     width: 50px;
   }
- 
+
 }
 
-.img-hover, .card-hover-bg{
+.img-hover,
+.card-hover-bg {
   transition: .5s ease-in;
   -webkit-transition: .5s ease-in;
   -o-transition: .5s ease-in;
-  
+
 }
 
-.card-hover-bg:hover{
+.card-hover-bg:hover {
   background: $color-principal;
   transition: .5s ease-in;
+  -webkit-transition: .5s ease-in;
+  -o-transition: .5s ease-in;
+
+  h3,
+  p {
+    color: $color-blanco !important;
+    transition: .5s ease-in;
     -webkit-transition: .5s ease-in;
     -o-transition: .5s ease-in;
+  }
 
-    h3,p {
-      color: $color-blanco!important;
-      transition: .5s ease-in;
-      -webkit-transition: .5s ease-in;
-      -o-transition: .5s ease-in;
-    }
-
-    .img-hover{
-      transition: .5s ease-in;
-      -webkit-transition: .5s ease-in;
-      -o-transition: .5s ease-in;
-      transform: scale(1.5);
-      color: $color-blanco!important;
+  .img-hover {
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+    transform: scale(1.5);
+    color: $color-blanco !important;
   }
 }
 
@@ -347,29 +389,36 @@ main {
   .bg-silueta {
     height: 600px !important;
   }
-  .btn-contacto-menu{
+
+  .btn-contacto-menu {
     visibility: hidden !important;
 
   }
-  .redes-sociales{
+
+  .redes-sociales {
     visibility: hidden !important;
   }
-  header{
+
+  header {
     position: fixed;
-    background: $color-blanco;
+    // background: $color-blanco;
   }
-  .carousel-bg{
-    height: 100vh!important;
+
+  .carousel-bg {
+    height: 100vh !important;
   }
-  .justify-content-center-sm{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    p{
+
+  .justify-content-center-sm {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+
+    p {
       text-align: center;
     }
   }
-  .flex-column-reverse-sm{
+
+  .flex-column-reverse-sm {
     flex-direction: column-reverse;
   }
 }
@@ -395,6 +444,26 @@ main {
 .animar {
   animation: aparecer 1.3s;
 }
-footer{
-  background: #d1d1d1;
+
+footer {
+  background: #efefef;
+}
+
+.img-servicio-hover {
+  margin-top: 200%;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+
+}
+
+
+
+.card-img-hover:hover .img-servicio-hover {
+  margin-top: 0;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+
+
 }

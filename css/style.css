@@ -43,6 +43,17 @@ h6 {
   background-color: #0032a0;
 }
 
+.btn-general {
+  background: #0032a0 !important;
+  color: #f9f9f9;
+}
+
+.btn-general:hover {
+  background: none !important;
+  color: #0032a0 !important;
+  border: 1px solid #0032a0 !important;
+}
+
 p {
   color: #121212;
 }
@@ -58,6 +69,7 @@ img {
 
 .logo {
   width: 150px;
+  z-index: 9999 !important;
 }
 
 .color-icon {
@@ -69,17 +81,51 @@ img {
   z-index: 99 !important;
 }
 
+.sticky {
+  background-color: #0032a0;
+  height: 70px;
+}
+
+.sticky .list-menu .list li .item-menu {
+  color: #f9f9f9 !important;
+  -webkit-transition: .6s ease-in;
+  transition: .6s ease-in;
+}
+
+.sticky .logo img {
+  width: 70%;
+}
+
+.sticky .burger-menu {
+  color: #f9f9f9 !important;
+  -webkit-transition: .6s ease-in;
+  transition: .6s ease-in;
+}
+
 header {
+  background: rgba(255, 255, 255, 0.14);
+  border-bottom: 2px solid #d1d1d1;
   z-index: 99;
   width: 100%;
-  height: auto;
+  height: 100px;
   overflow: hidden;
   z-index: 999;
+  position: fixed;
+  -webkit-transition: .6s ease-in;
+  transition: .6s ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .list-menu .list li .item-menu {
   display: inline-block;
   position: relative;
+  -webkit-transition: .6s ease-in;
+  transition: .6s ease-in;
 }
 
 header .list-menu .list li .item-menu:after {
@@ -91,7 +137,7 @@ header .list-menu .list li .item-menu:after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #0032a0;
+  background-color: #f9f9f9;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.25s ease-out;
@@ -112,7 +158,6 @@ header .menu-bar-movil {
   position: fixed;
   z-index: 99999 !important;
   top: 0;
-  padding: 0 1.5rem;
   display: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -130,6 +175,9 @@ header .menu-bar-movil .logo-menu-movil {
 header .menu-bar-movil .burger-menu {
   cursor: pointer;
   font-size: 2.1875rem;
+  color: #f9f9f9;
+  -webkit-transition: .6s ease-in;
+  transition: .6s ease-in;
 }
 
 header .menu-bar-movil .slideMenu {
@@ -179,7 +227,7 @@ header .menu-bar-movil .slideMenu .menu-principal a:hover {
 }
 
 .carousel-bg {
-  height: 500px !important;
+  height: 100vh !important;
 }
 
 .carousel-bg:nth-child(1) {
@@ -269,7 +317,8 @@ main .icon {
   width: 50px;
 }
 
-.img-hover, .card-hover-bg {
+.img-hover,
+.card-hover-bg {
   transition: .5s ease-in;
   -webkit-transition: .5s ease-in;
   -o-transition: .5s ease-in;
@@ -282,7 +331,8 @@ main .icon {
   -o-transition: .5s ease-in;
 }
 
-.card-hover-bg:hover h3, .card-hover-bg:hover p {
+.card-hover-bg:hover h3,
+.card-hover-bg:hover p {
   color: #f9f9f9 !important;
   transition: .5s ease-in;
   -webkit-transition: .5s ease-in;
@@ -329,22 +379,21 @@ main .icon {
   }
   header {
     position: fixed;
-    background: #f9f9f9;
   }
   .carousel-bg {
     height: 100vh !important;
   }
   .justify-content-center-sm {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
   .justify-content-center-sm p {
     text-align: center;
@@ -393,6 +442,20 @@ main .icon {
 }
 
 footer {
-  background: #d1d1d1;
+  background: #efefef;
+}
+
+.img-servicio-hover {
+  margin-top: 200%;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.card-img-hover:hover .img-servicio-hover {
+  margin-top: 0;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
 }
 /*# sourceMappingURL=style.css.map */
